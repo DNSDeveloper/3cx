@@ -11,9 +11,7 @@ export default function Monitoring() {
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">
-                                Follow Up
-                            </h5>
+                            <h5 className="modal-title">Follow Up</h5>
                             <button
                                 type="button"
                                 className="btn-close"
@@ -62,6 +60,7 @@ export default function Monitoring() {
                             </div>
                         </div>
                         <div className="modal-footer">
+                            <button className="btn btn-warning">Follow Up</button>
                             <button className="btn btn-success">Submit</button>
                         </div>
                     </div>
@@ -77,9 +76,7 @@ export default function Monitoring() {
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">
-                                View Solution
-                            </h5>
+                            <h5 className="modal-title">View Solution</h5>
                             <button
                                 type="button"
                                 className="btn-close"
@@ -100,9 +97,7 @@ export default function Monitoring() {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                Provider
-                                            </td>
+                                            <td>Provider</td>
                                             <td>jangan tidur</td>
                                             <td>oke</td>
                                             <td>In Progress</td>
@@ -111,24 +106,36 @@ export default function Monitoring() {
                                 </table>
                             </div>
                         </div>
-                        <div className="modal-footer">
-                            <button className="btn btn-warning">In Progress</button>
-                            <button className="btn btn-success">Done</button>
-                        </div>
                     </div>
                 </div>
             </div>
             <div className="table-responsive">
                 <h6>Filter By :</h6>
                 <div className="row mb-2">
-                    <div className="col-4">
-                        <input type="text" placeholder="Transaction ID" className="form-control" />
+                    <div className="col-3">
+                        <input
+                            type="text"
+                            placeholder="Transaction ID"
+                            className="form-control"
+                        />
                     </div>
-                    <div className="col-4">
+                    <div className="col-3">
                         <input type="text" placeholder="No Card" className="form-control" />
                     </div>
-                    <div className="col-4">
-                        <input type="text" placeholder="Provider" className="form-control" />
+                    <div className="col-3">
+                        <input
+                            type="text"
+                            placeholder="Provider"
+                            className="form-control"
+                        />
+                    </div>
+                    <div className="col-3">
+                        <select className="form-select" id="">
+                            <option value="">Open</option>
+                            <option value="">In Progress</option>
+                            <option value="">Follow Up</option>
+                            <option value="">Closed</option>
+                        </select>
                     </div>
                 </div>
                 <div className="row">
@@ -180,13 +187,21 @@ export default function Monitoring() {
                             <td>Closed</td>
                             <td>Syahri</td>
                             <td>
-
-                                <button className="btn btn-success btn-sm me-1" data-bs-target="#followup" data-bs-toggle="modal">
+                                {/* kalo status nya udh close ini gausah ada */}
+                                <button
+                                    className="btn btn-success btn-sm me-1"
+                                    data-bs-target="#followup"
+                                    data-bs-toggle="modal"
+                                >
                                     Follow Up
                                 </button>
 
                                 {/* isi dari follow up */}
-                                <button className="btn btn-success btn-sm" data-bs-target="#viewSolution" data-bs-toggle="modal">
+                                <button
+                                    className="btn btn-success btn-sm"
+                                    data-bs-target="#viewSolution"
+                                    data-bs-toggle="modal"
+                                >
                                     View Solution
                                 </button>
                             </td>

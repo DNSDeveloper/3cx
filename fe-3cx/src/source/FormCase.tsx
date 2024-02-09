@@ -56,7 +56,7 @@ export default function FormCase() {
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td>0909090909</td>
+                                            <td>023482131</td>
                                             <td></td>
                                             <td>2024-01-29</td>
                                             <td>082114361948</td>
@@ -211,6 +211,7 @@ export default function FormCase() {
                         </div>
                     </div>
                     <div className="row mt-3">
+                        {/* jika Source Institution nya === provider */}
                         <div className="col-12">
                             <input
                                 type="text"
@@ -218,6 +219,8 @@ export default function FormCase() {
                                 placeholder="Provider jika source institution nya Provider Search by Provider master"
                             />
                         </div>
+                        {/*  */}
+
                     </div>
                     <div className="row mt-3">
                         <div className="col-6">
